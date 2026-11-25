@@ -1,0 +1,33 @@
+{
+  "title": "FaithfulCTI: Answer Accuracy and Rationale Validity Benchmark for CTI and Vulnerability Analysis",
+  "description": "Replication package for FaithfulCTI, a benchmark that scores answer accuracy and the validity of the written rationale separately over 200 CTI/vulnerability items across four tasks (knowledge MCQ, CVE-to-CWE mapping, CVSS v3.1 severity estimation, and MITRE ATT&CK technique extraction). Includes the audited benchmark (testset v4f), model responses (main, clean-twin, voting, and reproducibility runs), expert labels and a four-tier rubric with English versions, the inter-annotator agreement package, scoring and reanalysis scripts, and result figures. Code is licensed under Apache-2.0; original labels and data under CC BY 4.0; files containing or quoting CTIBench text under CC BY-NC-SA 4.0 (see README).",
+  "upload_type": "software",
+  "version": "1.0.0",
+  "publication_date": "2026-11-26",
+  "license": "Apache-2.0",
+  "access_right": "open",
+  "creators": [
+    {
+      "name": "Moon, Kwangsuk",
+      "orcid": "0009-0002-9943-9218",
+      "affiliation": "Soongsil University / Korean Reinsurance Company"
+    }
+  ],
+  "keywords": [
+    "benchmark",
+    "chain-of-thought",
+    "CVSS",
+    "cyber threat intelligence",
+    "large language models",
+    "LLM evaluation",
+    "rationale validity",
+    "vulnerability analysis"
+  ],
+  "related_identifiers": [
+    {
+      "relation": "isSupplementTo",
+      "identifier": "https://github.com/SecurityReader/faithfulcti",
+      "scheme": "url"
+    }
+  ]
+}
