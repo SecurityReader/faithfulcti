@@ -1,0 +1,24 @@
+# secrets
+*.key
+*.env
+.env*
+**/secrets*
+# python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+# office locks / temp
+.~lock.*#
+~$*
+*.tmp
+# OS
+.DS_Store
+Thumbs.db
+# internal backups / intermediate (do not publish)
+Backup/
+raw_traces_*
+*_v4a*.json
+*_v4b*.json
+*_v4c*.json
+*_v4d*.json
+*_v4e*.json

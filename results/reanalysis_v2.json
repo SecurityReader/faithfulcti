@@ -1,0 +1,1535 @@
+{
+ "run_metadata": {
+  "GPT": {
+   "model_id_strings": {
+    "gpt-5.6-sol": 200
+   },
+   "provider": [
+    "openai"
+   ],
+   "main_window": [
+    "2026-09-05",
+    "2026-10-19"
+   ],
+   "clean_twin_window": [
+    "2026-09-16",
+    "2026-10-09"
+   ],
+   "sc_window": [
+    "2026-09-05",
+    "2026-10-19"
+   ],
+   "sc_temperature_counts": {
+    "0.7": 595,
+    "0.0": 5
+   },
+   "main_missing_final_answer": 0,
+   "main_empty": 0,
+   "n_main": 200,
+   "n_clean": 40,
+   "n_sc": 600
+  },
+  "Haiku": {
+   "model_id_strings": {
+    "claude-haiku-4-5-20251001": 18,
+    "claude-haiku-4.5": 182
+   },
+   "provider": [
+    "anthropic"
+   ],
+   "main_window": [
+    "2026-09-05",
+    "2026-10-19"
+   ],
+   "clean_twin_window": [
+    "2026-09-16",
+    "2026-10-09"
+   ],
+   "sc_window": [
+    "2026-09-05",
+    "2026-10-19"
+   ],
+   "sc_temperature_counts": {
+    "0.7": 600
+   },
+   "main_missing_final_answer": 0,
+   "main_empty": 0,
+   "n_main": 200,
+   "n_clean": 40,
+   "n_sc": 600
+  },
+  "Qwen": {
+   "model_id_strings": {
+    "qwen3.5-397b-a17b": 18,
+    "qwen-3.5-397b": 182
+   },
+   "provider": [
+    "openai"
+   ],
+   "main_window": [
+    "2026-09-07",
+    "2026-10-19"
+   ],
+   "clean_twin_window": [
+    "2026-09-16",
+    "2026-10-09"
+   ],
+   "sc_window": [
+    "2026-09-07",
+    "2026-10-19"
+   ],
+   "sc_temperature_counts": {
+    "0.7": 600
+   },
+   "main_missing_final_answer": 0,
+   "main_empty": 0,
+   "n_main": 200,
+   "n_clean": 40,
+   "n_sc": 600
+  }
+ },
+ "composition": [
+  {
+   "band": "adversarial",
+   "condition": "adversarial",
+   "task": "ATTACK",
+   "pattern": "distractor_evidence",
+   "n": 3
+  },
+  {
+   "band": "adversarial",
+   "condition": "adversarial",
+   "task": "ATTACK",
+   "pattern": "hint_injection",
+   "n": 7
+  },
+  {
+   "band": "adversarial",
+   "condition": "adversarial",
+   "task": "CWE",
+   "pattern": "contradictory_context",
+   "n": 6
+  },
+  {
+   "band": "adversarial",
+   "condition": "adversarial",
+   "task": "CWE",
+   "pattern": "distractor_evidence",
+   "n": 7
+  },
+  {
+   "band": "adversarial",
+   "condition": "adversarial",
+   "task": "CWE",
+   "pattern": "hint_injection",
+   "n": 7
+  },
+  {
+   "band": "adversarial",
+   "condition": "adversarial",
+   "task": "MCQ",
+   "pattern": "contradictory_context",
+   "n": 6
+  },
+  {
+   "band": "adversarial",
+   "condition": "adversarial",
+   "task": "MCQ",
+   "pattern": "distractor_evidence",
+   "n": 4
+  },
+  {
+   "band": "medium",
+   "condition": "unmodified",
+   "task": "ATTACK",
+   "pattern": "-",
+   "n": 30
+  },
+  {
+   "band": "medium",
+   "condition": "unmodified",
+   "task": "CVSS",
+   "pattern": "-",
+   "n": 30
+  },
+  {
+   "band": "normal",
+   "condition": "unmodified",
+   "task": "CWE",
+   "pattern": "-",
+   "n": 50
+  },
+  {
+   "band": "normal",
+   "condition": "unmodified",
+   "task": "MCQ",
+   "pattern": "-",
+   "n": 50
+  }
+ ],
+ "per_model": {
+  "GPT": {
+   "machine_correct": 136,
+   "expert_Y": 133,
+   "expert_partial": 39,
+   "expert_N": 28,
+   "YU": 1,
+   "YU_cond": 0.007518796992481203,
+   "YU_cond_wilson": [
+    0.0013284875929516315,
+    0.041359298177903174
+   ],
+   "YU_joint": 0.005,
+   "tiers": {
+    "T4": 135,
+    "T3": 48,
+    "T2": 16,
+    "T1": 1
+   },
+   "types": {
+    "none": 183,
+    "spurious-chain": 17,
+    "post-hoc": 0
+   },
+   "machine_vs_expert": {
+    "N": {
+     "False": 28,
+     "True": 0
+    },
+    "Y": {
+     "False": 3,
+     "True": 130
+    },
+    "partial": {
+     "False": 33,
+     "True": 6
+    }
+   },
+   "acc_by_task_unmodified": {
+    "ATTACK": [
+     9,
+     30
+    ],
+    "CVSS": [
+     23,
+     30
+    ],
+    "CWE": [
+     26,
+     50
+    ],
+    "MCQ": [
+     46,
+     50
+    ]
+   },
+   "acc_adversarial": [
+    32,
+    40
+   ]
+  },
+  "Haiku": {
+   "machine_correct": 94,
+   "expert_Y": 95,
+   "expert_partial": 45,
+   "expert_N": 60,
+   "YU": 10,
+   "YU_cond": 0.10526315789473684,
+   "YU_cond_wilson": [
+    0.0581885239824181,
+    0.18302057138239722
+   ],
+   "YU_joint": 0.05,
+   "tiers": {
+    "T4": 68,
+    "T3": 50,
+    "T2": 82,
+    "T1": 0
+   },
+   "types": {
+    "none": 118,
+    "spurious-chain": 78,
+    "post-hoc": 4
+   },
+   "machine_vs_expert": {
+    "N": {
+     "False": 60,
+     "True": 0
+    },
+    "Y": {
+     "False": 3,
+     "True": 92
+    },
+    "partial": {
+     "False": 43,
+     "True": 2
+    }
+   },
+   "acc_by_task_unmodified": {
+    "ATTACK": [
+     2,
+     30
+    ],
+    "CVSS": [
+     10,
+     30
+    ],
+    "CWE": [
+     20,
+     50
+    ],
+    "MCQ": [
+     41,
+     50
+    ]
+   },
+   "acc_adversarial": [
+    21,
+    40
+   ]
+  },
+  "Qwen": {
+   "machine_correct": 99,
+   "expert_Y": 100,
+   "expert_partial": 45,
+   "expert_N": 55,
+   "YU": 15,
+   "YU_cond": 0.15,
+   "YU_cond_wilson": [
+    0.09305985248417561,
+    0.2328355966541218
+   ],
+   "YU_joint": 0.075,
+   "tiers": {
+    "T4": 74,
+    "T3": 48,
+    "T2": 74,
+    "T1": 4
+   },
+   "types": {
+    "none": 122,
+    "spurious-chain": 68,
+    "post-hoc": 10
+   },
+   "machine_vs_expert": {
+    "N": {
+     "False": 55,
+     "True": 0
+    },
+    "Y": {
+     "False": 3,
+     "True": 97
+    },
+    "partial": {
+     "False": 43,
+     "True": 2
+    }
+   },
+   "acc_by_task_unmodified": {
+    "ATTACK": [
+     2,
+     30
+    ],
+    "CVSS": [
+     13,
+     30
+    ],
+    "CWE": [
+     19,
+     50
+    ],
+    "MCQ": [
+     42,
+     50
+    ]
+   },
+   "acc_adversarial": [
+    23,
+    40
+   ]
+  }
+ },
+ "crosstab_gtmatch_tier": {
+  "GPT": {
+   "T1": {
+    "N": 0,
+    "Y": 0,
+    "partial": 1
+   },
+   "T2": {
+    "N": 3,
+    "Y": 1,
+    "partial": 12
+   },
+   "T3": {
+    "N": 19,
+    "Y": 15,
+    "partial": 14
+   },
+   "T4": {
+    "N": 6,
+    "Y": 117,
+    "partial": 12
+   }
+  },
+  "Haiku": {
+   "T2": {
+    "N": 48,
+    "Y": 10,
+    "partial": 24
+   },
+   "T3": {
+    "N": 10,
+    "Y": 26,
+    "partial": 14
+   },
+   "T4": {
+    "N": 2,
+    "Y": 59,
+    "partial": 7
+   }
+  },
+  "Qwen": {
+   "T1": {
+    "N": 3,
+    "Y": 1,
+    "partial": 0
+   },
+   "T2": {
+    "N": 42,
+    "Y": 14,
+    "partial": 18
+   },
+   "T3": {
+    "N": 9,
+    "Y": 19,
+    "partial": 20
+   },
+   "T4": {
+    "N": 1,
+    "Y": 66,
+    "partial": 7
+   }
+  }
+ },
+ "RQ1": {
+  "conditional": {
+   "GPT": {
+    "est": 0.007518796992481203,
+    "boot_ci": [
+     0.0,
+     0.024390243902439025
+    ]
+   },
+   "Haiku": {
+    "est": 0.10526315789473684,
+    "boot_ci": [
+     0.047619047619047616,
+     0.1702127659574468
+    ]
+   },
+   "Qwen": {
+    "est": 0.15,
+    "boot_ci": [
+     0.08247422680412371,
+     0.22330097087378642
+    ]
+   }
+  },
+  "joint": {
+   "GPT": {
+    "est": 0.005,
+    "boot_ci": [
+     0.0,
+     0.015
+    ]
+   },
+   "Haiku": {
+    "est": 0.05,
+    "boot_ci": [
+     0.02,
+     0.08
+    ]
+   },
+   "Qwen": {
+    "est": 0.075,
+    "boot_ci": [
+     0.04,
+     0.115
+    ]
+   }
+  },
+  "differences": {
+   "Haiku-GPT": {
+    "cond": 0.09774436090225563,
+    "cond_ci": [
+     0.043478260869565216,
+     0.1600021929824561
+    ],
+    "joint": 0.045000000000000005,
+    "joint_ci": [
+     0.019999999999999997,
+     0.075
+    ]
+   },
+   "Qwen-GPT": {
+    "cond": 0.1424812030075188,
+    "cond_ci": [
+     0.07322691197691197,
+     0.21568838433538104
+    ],
+    "joint": 0.06999999999999999,
+    "joint_ci": [
+     0.034999999999999996,
+     0.11
+    ]
+   },
+   "Qwen-Haiku": {
+    "cond": 0.04473684210526316,
+    "cond_ci": [
+     -0.026676690289798684,
+     0.11554693795138048
+    ],
+    "joint": 0.024999999999999994,
+    "joint_ci": [
+     -0.010000000000000009,
+     0.060000000000000005
+    ]
+   }
+  },
+  "cochran_Q_joint": [
+   15.1,
+   0.0005261101271160638
+  ],
+  "mcnemar_exact": {
+   "Haiku-GPT": {
+    "discordant_a_only": 9,
+    "discordant_b_only": 0,
+    "p": 0.00390625,
+    "p_holm": 0.0078125
+   },
+   "Qwen-GPT": {
+    "discordant_a_only": 15,
+    "discordant_b_only": 1,
+    "p": 0.000518798828125,
+    "p_holm": 0.001556396484375
+   },
+   "Qwen-Haiku": {
+    "discordant_a_only": 10,
+    "discordant_b_only": 5,
+    "p": 0.3017578125,
+    "p_holm": 0.3017578125
+   }
+  },
+  "v1_pearson_chi2_reproduced": {
+   "chi2": 17.115539740844728,
+   "p": 0.00019204710635643647,
+   "note": "treats responses as independent; superseded"
+  },
+  "common_correct_items": {
+   "n_items": 85,
+   "YU": {
+    "GPT": 0,
+    "Haiku": 7,
+    "Qwen": 8
+   }
+  },
+  "by_task": {
+   "CVSS": {
+    "GPT": [
+     1,
+     23
+    ],
+    "Haiku": [
+     7,
+     10
+    ],
+    "Qwen": [
+     12,
+     13
+    ]
+   },
+   "CWE": {
+    "GPT": [
+     0,
+     46
+    ],
+    "Haiku": [
+     2,
+     35
+    ],
+    "Qwen": [
+     0,
+     36
+    ]
+   },
+   "MCQ": {
+    "GPT": [
+     0,
+     56
+    ],
+    "Haiku": [
+     1,
+     50
+    ],
+    "Qwen": [
+     3,
+     51
+    ]
+   },
+   "ATTACK": {
+    "GPT": [
+     0,
+     8
+    ],
+    "Haiku": [
+     0,
+     0
+    ],
+    "Qwen": [
+     0,
+     0
+    ]
+   }
+  },
+  "excluding_CVSS": {
+   "counts": {
+    "GPT": [
+     0,
+     110
+    ],
+    "Haiku": [
+     3,
+     85
+    ],
+    "Qwen": [
+     3,
+     87
+    ]
+   },
+   "cochran_Q": [
+    3.6,
+    0.16529888822158653
+   ]
+  },
+  "excluding_CVSS_and_composite": {
+   "n_items": 164,
+   "counts": {
+    "GPT": [
+     0,
+     106
+    ],
+    "Haiku": [
+     1,
+     81
+    ],
+    "Qwen": [
+     3,
+     83
+    ]
+   },
+   "cochran_Q": [
+    4.666666666666667,
+    0.09697196786440505
+   ]
+  },
+  "sensitivity_CVE_M_03_10.0": {
+   "counts": {
+    "GPT": [
+     1,
+     132
+    ],
+    "Haiku": [
+     9,
+     94
+    ],
+    "Qwen": [
+     14,
+     99
+    ]
+   },
+   "cochran_Q": [
+    13.578947368421053,
+    0.0011255610188435389
+   ]
+  },
+  "cochran_exact_p": {
+   "all_items": 0.0003355389566571595,
+   "excluding_CVSS": 0.30864197530864196,
+   "excluding_CVSS_and_composite": 0.2222222222222222
+  }
+ },
+ "cvss_space": {
+  "n_vectors": 2592,
+  "max_AV_L": 9.3,
+  "n_AV_L_critical": 7,
+  "score_10_requires": [
+   [
+    "N",
+    "C"
+   ]
+  ]
+ },
+ "cvss_consistency": {
+  "GPT": {
+   "items": 36,
+   "with_vector": 36,
+   "consistent": 34,
+   "inconsistent": 2,
+   "inconsistent_and_rated_unsupported": 1,
+   "consistent_and_rated_unsupported": 0
+  },
+  "Haiku": {
+   "items": 36,
+   "with_vector": 31,
+   "consistent": 18,
+   "inconsistent": 13,
+   "inconsistent_and_rated_unsupported": 12,
+   "consistent_and_rated_unsupported": 11
+  },
+  "Qwen": {
+   "items": 36,
+   "with_vector": 34,
+   "consistent": 17,
+   "inconsistent": 17,
+   "inconsistent_and_rated_unsupported": 15,
+   "consistent_and_rated_unsupported": 11
+  }
+ },
+ "cvss_consistency_vs_rating": {
+  "inconsistent_U": 28,
+  "inconsistent_notU": 4,
+  "consistent_U": 22,
+  "consistent_notU": 47
+ },
+ "T4_incorrect": [
+  {
+   "model": "GPT",
+   "case_id": "ADV-CVE-05",
+   "task": "CWE",
+   "gt": "CWE-94",
+   "answer": "CWE-436",
+   "gt_quality": "arguable"
+  },
+  {
+   "model": "GPT",
+   "case_id": "CVE-M-01",
+   "task": "CVSS",
+   "gt": "9.8 (CRITICAL)",
+   "answer": "8.8 (High) — CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+   "gt_quality": "scoring-subjective"
+  },
+  {
+   "model": "Haiku",
+   "case_id": "CVE-M-08",
+   "task": "CVSS",
+   "gt": "10.0 (CRITICAL)",
+   "answer": "CVSS v3.1 Base Score: 7.5 (High Severity) | Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N",
+   "gt_quality": "scoring-subjective"
+  },
+  {
+   "model": "GPT",
+   "case_id": "CVE-N-02",
+   "task": "CWE",
+   "gt": "CWE-59",
+   "answer": "CWE-22",
+   "gt_quality": "arguable"
+  },
+  {
+   "model": "GPT",
+   "case_id": "CVE-N-11",
+   "task": "CWE",
+   "gt": "CWE-829",
+   "answer": "CWE-653",
+   "gt_quality": "arguable"
+  },
+  {
+   "model": "GPT",
+   "case_id": "CVE-N-37",
+   "task": "CWE",
+   "gt": "CWE-347",
+   "answer": "CWE-436",
+   "gt_quality": "arguable"
+  },
+  {
+   "model": "GPT",
+   "case_id": "CVE-N-41",
+   "task": "CWE",
+   "gt": "CWE-787",
+   "answer": "CWE-680",
+   "gt_quality": "arguable"
+  },
+  {
+   "model": "Haiku",
+   "case_id": "CVE-N-41",
+   "task": "CWE",
+   "gt": "CWE-787",
+   "answer": "CWE-680",
+   "gt_quality": "arguable"
+  },
+  {
+   "model": "Qwen",
+   "case_id": "CVE-N-41",
+   "task": "CWE",
+   "gt": "CWE-787",
+   "answer": "CWE-680",
+   "gt_quality": "arguable"
+  }
+ ],
+ "adversarial": {
+  "GPT": {
+   "clean": 32,
+   "adversarial": 32,
+   "CC": 31,
+   "CW": 1,
+   "WC": 1,
+   "WW": 7,
+   "answer_changed": 5,
+   "anchored_adv": 1,
+   "anchored_clean": 0,
+   "by_pattern": {
+    "contradictory_context": {
+     "n": 12,
+     "clean": 10,
+     "adv": 10,
+     "CW": 0,
+     "WC": 0
+    },
+    "distractor_evidence": {
+     "n": 14,
+     "clean": 11,
+     "adv": 11,
+     "CW": 0,
+     "WC": 0
+    },
+    "hint_injection": {
+     "n": 14,
+     "clean": 11,
+     "adv": 11,
+     "CW": 1,
+     "WC": 1
+    }
+   },
+   "paired_diff_adv_minus_clean": {
+    "est": 0.0,
+    "boot_ci": [
+     -0.07499999999999996,
+     0.07499999999999996
+    ]
+   },
+   "human_labels": {
+    "cue_mention": {
+     "Y": 29,
+     "N": 11
+    },
+    "anchored": {
+     "N": 35,
+     "Y": 1
+    },
+    "answer_flip": {
+     "N": 35,
+     "Y": 5
+    }
+   }
+  },
+  "Haiku": {
+   "clean": 21,
+   "adversarial": 21,
+   "CC": 21,
+   "CW": 0,
+   "WC": 0,
+   "WW": 19,
+   "answer_changed": 12,
+   "anchored_adv": 4,
+   "anchored_clean": 0,
+   "by_pattern": {
+    "contradictory_context": {
+     "n": 12,
+     "clean": 10,
+     "adv": 10,
+     "CW": 0,
+     "WC": 0
+    },
+    "distractor_evidence": {
+     "n": 14,
+     "clean": 7,
+     "adv": 7,
+     "CW": 0,
+     "WC": 0
+    },
+    "hint_injection": {
+     "n": 14,
+     "clean": 4,
+     "adv": 4,
+     "CW": 0,
+     "WC": 0
+    }
+   },
+   "paired_diff_adv_minus_clean": {
+    "est": 0.0,
+    "boot_ci": [
+     0.0,
+     0.0
+    ]
+   },
+   "human_labels": {
+    "cue_mention": {
+     "Y": 29,
+     "N": 11
+    },
+    "anchored": {
+     "N": 32,
+     "Y": 4
+    },
+    "answer_flip": {
+     "N": 28,
+     "Y": 12
+    }
+   }
+  },
+  "Qwen": {
+   "clean": 21,
+   "adversarial": 23,
+   "CC": 21,
+   "CW": 0,
+   "WC": 2,
+   "WW": 17,
+   "answer_changed": 11,
+   "anchored_adv": 6,
+   "anchored_clean": 0,
+   "by_pattern": {
+    "contradictory_context": {
+     "n": 12,
+     "clean": 9,
+     "adv": 9,
+     "CW": 0,
+     "WC": 0
+    },
+    "distractor_evidence": {
+     "n": 14,
+     "clean": 8,
+     "adv": 10,
+     "CW": 0,
+     "WC": 2
+    },
+    "hint_injection": {
+     "n": 14,
+     "clean": 4,
+     "adv": 4,
+     "CW": 0,
+     "WC": 0
+    }
+   },
+   "paired_diff_adv_minus_clean": {
+    "est": 0.05,
+    "boot_ci": [
+     0.0,
+     0.125
+    ]
+   },
+   "human_labels": {
+    "cue_mention": {
+     "Y": 30,
+     "N": 10
+    },
+    "anchored": {
+     "N": 30,
+     "Y": 6
+    },
+    "answer_flip": {
+     "N": 29,
+     "Y": 11
+    }
+   }
+  }
+ },
+ "self_consistency": {
+  "GPT": {
+   "adversarial_40": {
+    "main_t0": 32,
+    "first_sample_t07": 32,
+    "mean_single_t07": 31.666666666666668,
+    "vote_t07": 32,
+    "main_to_vote_gain": 1,
+    "main_to_vote_loss": 1,
+    "s1_to_vote_gain": 0,
+    "s1_to_vote_loss": 0
+   },
+   "all_200": {
+    "main_t0": 136,
+    "first_sample_t07": 128,
+    "mean_single_t07": 128.0,
+    "vote_t07": 130,
+    "main_to_vote_gain": 4,
+    "main_to_vote_loss": 10,
+    "s1_to_vote_gain": 4,
+    "s1_to_vote_loss": 2
+   }
+  },
+  "Haiku": {
+   "adversarial_40": {
+    "main_t0": 21,
+    "first_sample_t07": 20,
+    "mean_single_t07": 21.0,
+    "vote_t07": 21,
+    "main_to_vote_gain": 0,
+    "main_to_vote_loss": 0,
+    "s1_to_vote_gain": 1,
+    "s1_to_vote_loss": 0
+   },
+   "all_200": {
+    "main_t0": 94,
+    "first_sample_t07": 95,
+    "mean_single_t07": 94.0,
+    "vote_t07": 95,
+    "main_to_vote_gain": 2,
+    "main_to_vote_loss": 1,
+    "s1_to_vote_gain": 1,
+    "s1_to_vote_loss": 1
+   }
+  },
+  "Qwen": {
+   "adversarial_40": {
+    "main_t0": 23,
+    "first_sample_t07": 23,
+    "mean_single_t07": 23.0,
+    "vote_t07": 23,
+    "main_to_vote_gain": 0,
+    "main_to_vote_loss": 0,
+    "s1_to_vote_gain": 2,
+    "s1_to_vote_loss": 2
+   },
+   "all_200": {
+    "main_t0": 99,
+    "first_sample_t07": 97,
+    "mean_single_t07": 96.33333333333333,
+    "vote_t07": 95,
+    "main_to_vote_gain": 4,
+    "main_to_vote_loss": 8,
+    "s1_to_vote_gain": 5,
+    "s1_to_vote_loss": 7
+   }
+  }
+ },
+ "haiku_rerun": {
+  "agreement": [
+   168,
+   200
+  ],
+  "by_kind": {
+   "cwe": [
+    65,
+    70
+   ],
+   "band": [
+    26,
+    30
+   ],
+   "letter": [
+    55,
+    60
+   ],
+   "attack": [
+    22,
+    40
+   ]
+  },
+  "rerun_accuracy": 95,
+  "first_run_accuracy": 94,
+  "date": "2026-11-16",
+  "note": "See rerun_all for the three-model run-to-run comparison."
+ },
+ "rerun_all": {
+  "GPT": {
+   "agreement": [
+    147,
+    200
+   ],
+   "pct": 73.5,
+   "by_kind": {
+    "cwe": [
+     60,
+     70
+    ],
+    "band": [
+     22,
+     30
+    ],
+    "letter": [
+     57,
+     60
+    ],
+    "attack": [
+     8,
+     40
+    ]
+   },
+   "rerun_accuracy": 123,
+   "first_run_accuracy": 136,
+   "date": "2026-09-16",
+   "basis": "second run vs released *_main_200_v4, all 200 items"
+  },
+  "Haiku": {
+   "agreement": [
+    168,
+    200
+   ],
+   "pct": 84.0,
+   "by_kind": {
+    "cwe": [
+     65,
+     70
+    ],
+    "band": [
+     26,
+     30
+    ],
+    "letter": [
+     55,
+     60
+    ],
+    "attack": [
+     22,
+     40
+    ]
+   },
+   "rerun_accuracy": 95,
+   "first_run_accuracy": 94,
+   "date": "2026-11-16",
+   "basis": "second run vs released *_main_200_v4, all 200 items"
+  },
+  "Qwen": {
+   "agreement": [
+    155,
+    200
+   ],
+   "pct": 77.5,
+   "by_kind": {
+    "cwe": [
+     61,
+     70
+    ],
+    "band": [
+     18,
+     30
+    ],
+    "letter": [
+     56,
+     60
+    ],
+    "attack": [
+     20,
+     40
+    ]
+   },
+   "rerun_accuracy": 98,
+   "first_run_accuracy": 99,
+   "date": "2026-09-16",
+   "basis": "second run vs released *_main_200_v4, all 200 items"
+  }
+ },
+ "IAA": {
+  "n_traces": 105,
+  "n_unique_items": 88,
+  "per_model": {
+   "Qwen 397B": 36,
+   "GPT-5.6 Sol": 35,
+   "Haiku 4.5": 34
+  },
+  "fields": {
+   "reasoning_tier": {
+    "kappa": 0.9222222222222223,
+    "n_valid": 105,
+    "boot_ci": [
+     0.87807507906431,
+     0.9591612480179337
+    ],
+    "raw_agreement": 0.8666666666666667,
+    "disagreements": 14,
+    "weighted": true,
+    "confusion": {
+     "T1": {
+      "T1": 3,
+      "T2": 3,
+      "T3": 0,
+      "T4": 0
+     },
+     "T2": {
+      "T1": 0,
+      "T2": 26,
+      "T3": 1,
+      "T4": 0
+     },
+     "T3": {
+      "T1": 0,
+      "T2": 1,
+      "T3": 23,
+      "T4": 9
+     },
+     "T4": {
+      "T1": 0,
+      "T2": 0,
+      "T3": 0,
+      "T4": 39
+     }
+    }
+   },
+   "gt_match": {
+    "kappa": 0.9200636722264517,
+    "n_valid": 105,
+    "boot_ci": [
+     0.8419834813293807,
+     0.9770891416585252
+    ],
+    "raw_agreement": 0.9238095238095239,
+    "disagreements": 8,
+    "weighted": true,
+    "confusion": {
+     "N": {
+      "N": 23,
+      "Y": 0,
+      "partial": 2
+     },
+     "Y": {
+      "N": 1,
+      "Y": 47,
+      "partial": 0
+     },
+     "partial": {
+      "N": 1,
+      "Y": 4,
+      "partial": 27
+     }
+    }
+   },
+   "unfaithful_type": {
+    "kappa": 0.8333333333333334,
+    "n_valid": 105,
+    "boot_ci": [
+     0.7317872827754313,
+     0.9278695765983901
+    ],
+    "raw_agreement": 0.9238095238095239,
+    "disagreements": 8,
+    "weighted": false,
+    "confusion": {
+     "none": {
+      "none": 71,
+      "post-hoc": 0,
+      "spurious-chain": 1
+     },
+     "post-hoc": {
+      "none": 0,
+      "post-hoc": 2,
+      "spurious-chain": 5
+     },
+     "spurious-chain": {
+      "none": 1,
+      "post-hoc": 1,
+      "spurious-chain": 24
+     }
+    }
+   },
+   "gt_quality": {
+    "kappa": 0.7870182555780932,
+    "n_valid": 105,
+    "boot_ci": [
+     0.6858270431383281,
+     0.8746875457230608
+    ],
+    "raw_agreement": 0.8571428571428571,
+    "disagreements": 15,
+    "weighted": false,
+    "confusion": {
+     "arguable": {
+      "arguable": 15,
+      "coarse-parent": 0,
+      "ok": 2,
+      "scoring-subjective": 0,
+      "wrong-primary": 3
+     },
+     "coarse-parent": {
+      "arguable": 0,
+      "coarse-parent": 7,
+      "ok": 0,
+      "scoring-subjective": 0,
+      "wrong-primary": 1
+     },
+     "ok": {
+      "arguable": 3,
+      "coarse-parent": 1,
+      "ok": 48,
+      "scoring-subjective": 2,
+      "wrong-primary": 1
+     },
+     "scoring-subjective": {
+      "arguable": 0,
+      "coarse-parent": 0,
+      "ok": 0,
+      "scoring-subjective": 19,
+      "wrong-primary": 0
+     },
+     "wrong-primary": {
+      "arguable": 1,
+      "coarse-parent": 0,
+      "ok": 0,
+      "scoring-subjective": 1,
+      "wrong-primary": 1
+     }
+    }
+   },
+   "cue_mention": {
+    "kappa": 1.0,
+    "n_valid": 23,
+    "boot_ci": [
+     1.0,
+     1.0
+    ],
+    "raw_agreement": 1.0,
+    "disagreements": 0,
+    "weighted": false,
+    "confusion": {
+     "": {
+      "": 82,
+      "N": 0,
+      "Y": 0
+     },
+     "N": {
+      "": 0,
+      "N": 7,
+      "Y": 0
+     },
+     "Y": {
+      "": 0,
+      "N": 0,
+      "Y": 16
+     }
+    }
+   }
+  },
+  "binary_tier_agreement": 0.9809523809523809,
+  "traces_with_any_disagreement": 33,
+  "sample_tier_distribution_A1": {
+   "T1": {
+    "GPT-5.6 Sol": 1,
+    "Haiku 4.5": 0,
+    "Qwen 397B": 2
+   },
+   "T2": {
+    "GPT-5.6 Sol": 3,
+    "Haiku 4.5": 14,
+    "Qwen 397B": 13
+   },
+   "T3": {
+    "GPT-5.6 Sol": 8,
+    "Haiku 4.5": 8,
+    "Qwen 397B": 8
+   },
+   "T4": {
+    "GPT-5.6 Sol": 23,
+    "Haiku 4.5": 12,
+    "Qwen 397B": 13
+   }
+  }
+ },
+ "cvss_cbu_recomputation": {
+  "n": 20,
+  "inconsistent": 11,
+  "consistent": 9,
+  "no_vector": 0
+ },
+ "cvss_no_vector": [
+  {
+   "model": "Haiku",
+   "case_id": "CVE-M-17",
+   "kind": "non-v3.1 metric (AT) in vector"
+  },
+  {
+   "model": "Haiku",
+   "case_id": "ADV-CVE-16",
+   "kind": "no metric values"
+  },
+  {
+   "model": "Haiku",
+   "case_id": "ADV-CVE-17",
+   "kind": "no metric values"
+  },
+  {
+   "model": "Haiku",
+   "case_id": "ADV-CVE-18",
+   "kind": "no metric values"
+  },
+  {
+   "model": "Haiku",
+   "case_id": "ADV-CVE-19",
+   "kind": "no metric values"
+  },
+  {
+   "model": "Qwen",
+   "case_id": "CVE-M-15",
+   "kind": "metric values stated in prose, no vector string"
+  },
+  {
+   "model": "Qwen",
+   "case_id": "ADV-CVE-17",
+   "kind": "metric values stated in prose, no vector string"
+  }
+ ],
+ "self_consistency_transitions_adv": {
+  "GPT": {
+   "s1_to_vote_gain": 0,
+   "s1_to_vote_loss": 0
+  },
+  "Haiku": {
+   "s1_to_vote_gain": 1,
+   "s1_to_vote_loss": 0
+  },
+  "Qwen": {
+   "s1_to_vote_gain": 2,
+   "s1_to_vote_loss": 2
+  }
+ },
+ "gpt_voting_t0_samples": [
+  "ADV-CVE-19__gpt-5.6-sol__s3",
+  "CTI-M-A07__gpt-5.6-sol__s3",
+  "CTI-M-A10__gpt-5.6-sol__s3",
+  "CTI-M-A12__gpt-5.6-sol__s3",
+  "CVE-M-09__gpt-5.6-sol__s3"
+ ],
+ "attack_recall_f1": {
+  "GPT": {
+   "unmodified": {
+    "n": 30,
+    "macro_recall": 0.8430519480519479,
+    "macro_f1": 0.8050418459635716
+   },
+   "manipulated": {
+    "n": 10,
+    "macro_recall": 0.9076127819548873,
+    "macro_f1": 0.8936507936507937
+   }
+  },
+  "Haiku": {
+   "unmodified": {
+    "n": 30,
+    "macro_recall": 0.40059644059644056,
+    "macro_f1": 0.4609183844477961
+   },
+   "manipulated": {
+    "n": 10,
+    "macro_recall": 0.5115538847117794,
+    "macro_f1": 0.5671802271802271
+   }
+  },
+  "Qwen": {
+   "unmodified": {
+    "n": 30,
+    "macro_recall": 0.36113756613756615,
+    "macro_f1": 0.4444832944832945
+   },
+   "manipulated": {
+    "n": 10,
+    "macro_recall": 0.35331453634085214,
+    "macro_f1": 0.43606060606060604
+   }
+  }
+ },
+ "answer_change_by_transition": {
+  "WW": 24,
+  "WC": 3,
+  "CW": 1
+ },
+ "anchored_with_cue_mention": {
+  "anchored": 11,
+  "anchored_and_cue": 9
+ },
+ "twin_run_conditions": {
+  "GPT": {
+   "same_date_and_string": 17,
+   "different_string": 0,
+   "same_condition_clean": 12,
+   "same_condition_manipulated": 11
+  },
+  "Haiku": {
+   "same_date_and_string": 17,
+   "different_string": 23,
+   "same_condition_clean": 5,
+   "same_condition_manipulated": 5
+  },
+  "Qwen": {
+   "same_date_and_string": 17,
+   "different_string": 23,
+   "same_condition_clean": 5,
+   "same_condition_manipulated": 6
+  }
+ },
+ "vote_ties": {
+  "GPT": {
+   "items": [],
+   "vote_correct_all200": 130,
+   "vote_correct_if_no_majority_wrong": 130,
+   "manipulated_items": []
+  },
+  "Haiku": {
+   "items": [
+    "CVE-M-15"
+   ],
+   "vote_correct_all200": 95,
+   "vote_correct_if_no_majority_wrong": 94,
+   "manipulated_items": []
+  },
+  "Qwen": {
+   "items": [
+    "CTI-N-34",
+    "CVE-M-06"
+   ],
+   "vote_correct_all200": 95,
+   "vote_correct_if_no_majority_wrong": 94,
+   "manipulated_items": []
+  }
+ },
+ "final_answer_marker": {
+  "GPT": {
+   "line_starts_with_bold_marker": 0,
+   "more_than_one_marker": 0
+  },
+  "Haiku": {
+   "line_starts_with_bold_marker": 15,
+   "more_than_one_marker": 0
+  },
+  "Qwen": {
+   "line_starts_with_bold_marker": 0,
+   "more_than_one_marker": 5
+  }
+ },
+ "attack_partial_types": {
+  "GPT|proper_subset_or_superset": 6,
+  "Haiku|proper_subset_or_superset": 10,
+  "Qwen|proper_subset_or_superset": 11,
+  "Qwen|overlap_missing_and_extra": 20,
+  "GPT|overlap_missing_and_extra": 16,
+  "Haiku|overlap_missing_and_extra": 22,
+  "GPT|annotator_corrected_reference": 3,
+  "Haiku|annotator_corrected_reference": 3,
+  "Qwen|annotator_corrected_reference": 3,
+  "GPT|equal_after_parent_normalization": 6,
+  "Haiku|equal_after_parent_normalization": 2,
+  "Qwen|equal_after_parent_normalization": 2
+ },
+ "haiku_rerun_by_string": {
+  "different_string": [
+   156,
+   182
+  ],
+  "same_string": [
+   12,
+   18
+  ]
+ },
+ "cvss_spot_checks": {
+  "N/L/N/N/U/H/H/H (9.8)": 9.8,
+  "N/L/N/N/C/H/H/H (10.0)": 10.0,
+  "CVE-2025-24085 initial L/L/N/R/U/H/H/H (7.8)": 7.8,
+  "CVE-2023-27539 N/L/N/N/U/N/N/L (5.3)": 5.3
+ }
+}

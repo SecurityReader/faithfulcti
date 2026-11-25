@@ -1,0 +1,18 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0) — data and labels
+SPDX-License-Identifier: CC-BY-4.0
+
+Original material in this repository (expert labels, the CWE and CVSS items written
+from NVD records, model responses, ground-truth change log, and analysis outputs) is
+licensed under CC BY 4.0: https://creativecommons.org/licenses/by/4.0/
+
+Exception: files that reproduce or quote CTIBench text (the MCQ and ATT&CK items in
+benchmark/testset_v4f.json, the item text in labels/gold_labels.xlsx, item excerpts
+in iaa/IAA_adjudication_final.xlsx (18 rows, 15 items), and model responses in traces/
+that restate item text)
+are adapted from CTIBench (Alam et al., NeurIPS 2024), which is licensed under
+CC BY-NC-SA 4.0; that text is redistributed under CC BY-NC-SA 4.0:
+https://creativecommons.org/licenses/by-nc-sa/4.0/
+MITRE ATT&CK, NVD, and CWE content remains subject to its own terms. The AWS
+Deception Benchmark is referenced, not redistributed.
+
+Copyright 2026 Kwangsuk Moon.
