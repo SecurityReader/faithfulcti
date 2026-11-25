@@ -10,3 +10,4 @@ version: 1.0.0
 date-released: 2026-11-26
 license: Apache-2.0
 repository-code: "https://github.com/SecurityReader/faithfulcti"
+doi: 10.5281/zenodo.24545274

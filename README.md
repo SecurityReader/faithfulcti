@@ -4,7 +4,9 @@ FaithfulCTI scores answer *accuracy* and the *validity of the written rationale*
 
 > Companion artifacts for the paper *"FaithfulCTI: Evaluating Answer Accuracy and Rationale Validity of Large Language Models in Cyber Threat Intelligence and Vulnerability Analysis"* (manuscript in preparation for IEEE Access).
 
-**Released:** 2026-11-26 · **Version:** 1.0.0
+**Released:** 2026-11-26 · **Version:** 1.0.0 · **DOI:** [10.5281/zenodo.24545274](https://doi.org/10.5281/zenodo.24545274)
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24545274.svg)](https://doi.org/10.5281/zenodo.24545274)
 
 ## Key results (manuscript v2)
 - Answer correctness and rationale validity are scored separately for 600 responses (200 items × 3 models).
@@ -51,6 +53,6 @@ Code: Apache-2.0 (`LICENSE`). Original labels and data: CC BY 4.0 (`LICENSE-data
   author  = {Moon, Kwangsuk},
   journal = {IEEE Access (manuscript in preparation)},
   year    = {2026},
-  note    = {Code and data: https://github.com/SecurityReader/faithfulcti ; DOI: [ZENODO DOI]}
+  note    = {Code and data: https://github.com/SecurityReader/faithfulcti ; DOI: 10.5281/zenodo.24545274}
 }
 ```
