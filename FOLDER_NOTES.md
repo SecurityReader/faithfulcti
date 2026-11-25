@@ -18,7 +18,7 @@
 (또는 `python scripts/make_figures.py`로 올바른 4개를 재생성 가능.)
 
 ## 라이선스
-LICENSE(코드 Apache-2.0) 전문은 GitHub "Add license template"로 삽입 권장. LICENSE-data(CC BY 4.0) 포함.
+LICENSE(코드 Apache-2.0) 전문은 GitHub "Add license template"로 삽입 권장. DATA_LICENSE.txt(CC BY 4.0) 포함.
 
 ## κ 재현
 `python iaa/compute_kappa.py` → iaa/iaa_105_dual_labels.csv에서 κ 재계산(논문값 재현).

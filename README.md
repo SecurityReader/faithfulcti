@@ -44,7 +44,7 @@ GPT-5.6 Sol (frontier, closed), Claude Haiku 4.5 (closed), Qwen3.5-397B-A17B (op
 MCQ and ATT&CK items reuse CTIBench text verbatim (CTIBench is licensed CC BY-NC-SA 4.0); CWE and CVSS items were written from NVD records (NVD snapshot 2026-06-27). The ATT&CK technique corpus used for the retrieval context blocks is MITRE ATT&CK Enterprise **v19** (April 2026 release; 222 techniques, 475 sub-techniques), frozen as `benchmark/attack_corpus_v19.json` (© MITRE, ATT&CK Terms of Use; see `scripts/fetch_mitre_attack.py` for the pinned version). Files that contain or quote CTIBench text (`benchmark/testset_v4f.json` prompts, `labels/gold_labels.xlsx`, `iaa/IAA_adjudication_final.xlsx`, their English versions `labels/gold_labels_EN.xlsx` and `iaa/IAA_adjudication_final_EN.xlsx`, and model responses in `traces/` that restate item text) are distributed under CC BY-NC-SA 4.0. MITRE ATT&CK, CWE, and NVD content remains subject to its source terms.
 
 ## License
-Code: Apache-2.0 (`LICENSE`). Original labels and data: CC BY 4.0 (`LICENSE-data`), except files containing CTIBench text, which are CC BY-NC-SA 4.0 (see Third-party data).
+Code: Apache-2.0 (`LICENSE`). Original labels and data: CC BY 4.0 (`DATA_LICENSE.txt`), except files containing CTIBench text, which are CC BY-NC-SA 4.0 (see Third-party data).
 
 ## Citation
 ```bibtex
