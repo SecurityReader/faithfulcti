@@ -440,18 +440,18 @@ cb = fig.colorbar(im, ax=axes, fraction=.02, pad=.02); cb.set_label("Responses (
 plt.savefig(P("figures", "v2_fig3_crosstab.png"), bbox_inches="tight"); plt.close()
 
 
-# column-width version used in manuscript v2 (Fig. 3)
-plt.rcParams.update({"font.size": 6})
-fig, axes = plt.subplots(1, 3, figsize=(3.5, 1.45), sharey=True)
+# column-width version used in manuscript v2 (Fig. 3): panels stacked vertically for single-column layout
+plt.rcParams.update({"font.size": 7})
+fig, axes = plt.subplots(3, 1, figsize=(3.4, 4.3))
 for ax, m in zip(axes, MS):
     d_ = g[g.m == m]; M = np.array([[int(((d_.gt_match == q) & (d_.reasoning_tier == t)).sum()) for t in tiers] for q in gms])
     ax.imshow(M, cmap="Greys", vmin=0, vmax=140, aspect="auto")
     ax.set_xticks(range(4)); ax.set_xticklabels(tiers); ax.set_yticks(range(3)); ax.set_yticklabels(["Correct", "Partial", "Incorrect"])
     for i in range(3):
-        for j in range(4): ax.text(j, i, M[i, j], ha="center", va="center", fontsize=6, color="white" if M[i, j] > 70 else "black")
-    ax.set_title(NAME[m], fontsize=6); ax.tick_params(length=1.5, pad=1)
-fig.supxlabel("Rationale rating (shading: count, 0–140)", fontsize=6, y=0.02)
-plt.tight_layout(pad=0.3, w_pad=0.4); plt.savefig(P("figures", "v2_fig3_crosstab_col.png"), dpi=400); plt.close()
+        for j in range(4): ax.text(j, i, M[i, j], ha="center", va="center", fontsize=8, color="white" if M[i, j] > 70 else "black")
+    ax.set_title(NAME[m], fontsize=8); ax.tick_params(length=1.5, pad=1)
+fig.supxlabel("Rationale rating (shading: count, 0–140)", fontsize=7, y=0.01)
+plt.tight_layout(pad=0.4, h_pad=0.8); plt.savefig(P("figures", "v2_fig3_crosstab_col.png"), dpi=400); plt.close()
 
 # ---------------- write ----------------
 def conv(o):
